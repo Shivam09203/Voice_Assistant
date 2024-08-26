@@ -25,11 +25,11 @@ def take_command():
     try:
         print("Recognizing...")
         query = r.recognize_google(audio, language='en-in')
-        print("User said:" + query + "\n")
+        print("User said :" + query + "\n")
     except Exception as e:
         print(e)
         speak("I didnt understand")
-        return "None"
+        return take_command()
     return query
 
 
@@ -39,14 +39,8 @@ if __name__ == '__main__':
     speak("How can i help you")
     while True:
         query = take_command().lower()
-        if 'wikipedia' in query:
-            speak("Searching Wikipedia ...")
-            query = query.replace("wikipedia", '')
-            results = wikipedia.summary(query, sentences=2)
-            speak("According to wikipedia")
-            speak(results)
-        elif 'are you' in query:
-            speak("I am amigo developed by Shivam Gangal.")
+        if 'are you' in query or 'your name' in query:
+            speak("I am amigo, a voice assistant developed by Shivam Gangal.")
         elif 'open youtube' in query:
             speak("opening youtube")
             webbrowser.open("youtube.com")
@@ -64,7 +58,7 @@ if __name__ == '__main__':
             webbrowser.open("spotify.com")
         elif 'open whatsapp' in query:
             speak("opening whatsapp")
-            loc = "C:\\Users\\jaspr\\AppData\\Local\\WhatsApp\\WhatsApp.exe"
+            loc = "C:\\Users\\Shivam Gangal\\AppData\\Local\\WhatsApp"
             os.startfile(loc)
         elif 'play music' in query:
             speak("opening music")
@@ -82,4 +76,16 @@ if __name__ == '__main__':
             speak("opening local disk E")
             webbrowser.open("E://")
         elif 'sleep' in query:
+            speak("Good bye, and have a great day ahead.")
             exit(0)
+        elif 'what' in query or 'who' in query or 'why' in query or 'when' in query or 'where' in query or 'how' in query:
+            speak("Searching Wikipedia ...")
+            query = query.replace("wikipedia", '')
+            try:
+                results = wikipedia.summary(query, sentences=2)
+                speak("According to Wikipedia")
+                speak(results)
+            except wikipedia.exceptions.DisambiguationError as e:
+                speak("There were multiple results for your query. Please be more specific.")
+            except Exception as e:
+                speak("I couldn't find any results on Wikipedia. Please try again with a different query.")
