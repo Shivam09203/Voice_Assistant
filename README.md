@@ -23,7 +23,7 @@ Why Amigo:
 
 ### Built With
 
-* Python 3
+* Python and its libraries.
 
 
 <!-- USAGE EXAMPLES -->
@@ -48,19 +48,6 @@ Contributions are what make the open source community such an amazing place to b
 3. Commit your Changes
 4. Push to the Branch
 5. Open a Pull Request
-
-
-
-
-
-
-<!-- CONTACT -->
-## Contact
-LinkedIn
-[Jaspreet Singh](https://www.linkedin.com/in/jaspreetsidhu13/)
-
-More Projects
-GitHub: [JaspreetSidhu3](https://github.com/jaspreetsidhu3)
 
 
 
