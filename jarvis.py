@@ -35,12 +35,12 @@ def take_command():
 
 if __name__ == '__main__':
 
-    speak("Amigo assistance activated ")
+    speak("Jarvis activated ")
     speak("How can i help you")
     while True:
         query = take_command().lower()
         if 'are you' in query or 'your name' in query:
-            speak("I am amigo, a voice assistant developed by Shivam Gangal.")
+            speak("I am Jarvis, a voice assistant developed by Shivam Gangal.")
         elif 'open youtube' in query:
             speak("opening youtube")
             webbrowser.open("youtube.com")
