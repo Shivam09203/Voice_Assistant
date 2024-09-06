@@ -1,5 +1,5 @@
 <p align="center">
- <h3 align="center">Amigo -Voice assistant</h3>
+ <h3 align="center">Jarvis -Voice assistant</h3>
 
   <p align="center">
    Console Application which help to do your daily work routine.
@@ -15,7 +15,7 @@
 ## About The Project
   Console Application which help to do your daily work routine.
 
-Why Amigo:
+Why Jarvis:
 * It can search on wikipedia.
 * It can open YouTube, Spotify, Whatsapp (if installed on your pc) and other cool stuff.
 * You can easily add your command.
@@ -23,12 +23,12 @@ Why Amigo:
 
 ### Built With
 
-* Python and its libraries.
+* Python, Speech Recognition, NLP and other libraries.
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-1. It is easy to use just you need is basic Python knowledge
+1. It is easy to use. All you need is basic Python knowledge
 2. You can add your command inside main method by appending ladder if statements.
 
 ```
