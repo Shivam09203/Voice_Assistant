@@ -39,8 +39,12 @@ if __name__ == '__main__':
     speak("How can i help you")
     while True:
         query = take_command().lower()
-        if 'are you' in query or 'your name' in query:
+        if 'your name' in query:
             speak("I am Jarvis, a voice assistant developed by Shivam Gangal.")
+        elif 'how are you' in query:
+            speak("I am doing great sir. What can i do for you?")
+        elif 'hi' in query:
+            speak("Hello sir. What can i do for you?")
         elif 'open youtube' in query:
             speak("opening youtube")
             webbrowser.open("youtube.com")
@@ -76,7 +80,7 @@ if __name__ == '__main__':
             speak("opening local disk E")
             webbrowser.open("E://")
         elif 'sleep' in query:
-            speak("Good bye, and have a great day ahead.")
+            speak("Good bye sir. Its been a pleasure to serve you.")
             exit(0)
         elif 'what' in query or 'who' in query or 'why' in query or 'when' in query or 'where' in query or 'how' in query:
             speak("Searching Wikipedia ...")
