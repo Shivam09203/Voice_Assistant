@@ -80,7 +80,7 @@ if __name__ == '__main__':
             speak("opening local disk E")
             webbrowser.open("E://")
         elif 'sleep' in query:
-            speak("Good bye sir. Its been a pleasure to serve you.")
+            speak("Good bye sir. Its been an honour to serve you.")
             exit(0)
         elif 'what' in query or 'who' in query or 'why' in query or 'when' in query or 'where' in query or 'how' in query:
             speak("Searching Wikipedia ...")
